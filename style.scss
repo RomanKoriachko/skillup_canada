@@ -524,7 +524,6 @@ body {
         }
     }
     .review-section {
-        padding-bottom: 48px;
         text-align: center;
         .slider-text {
             .slider-item {
@@ -601,7 +600,6 @@ body {
             }
             .slick-dots {
                 bottom: -45px;
-                width: 95%;
             }
         }
         .author-and-fb-wrapper {
@@ -613,6 +611,22 @@ body {
             margin-top: 48px;
             @include mainButton();
             color: white;
+        }
+    }
+    .certificate-section {
+        padding-bottom: 50px;
+        .certificate-wrapper {
+            @include fonts.t2();
+            gap: 50px;
+            > img {
+                width: 50%;
+            }
+            .certificate-text {
+                > p,
+                div {
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
 }
@@ -836,6 +850,21 @@ body {
                 }
             }
         }
+        .certificate-section {
+            .certificate-wrapper {
+                align-items: center;
+                gap: 30px;
+                > img {
+                    width: 100%;
+                }
+            }
+            .certificate-1-wrapper {
+                flex-direction: column-reverse;
+            }
+            .certificate-2-wrapper {
+                flex-direction: column;
+            }
+        }
     }
     .footer {
         .footer-wrapper {
@@ -982,6 +1011,9 @@ body {
                     .review-wrapper {
                         max-width: 310px;
                     }
+                }
+                .slick-dots {
+                    width: 95%;
                 }
             }
             .review-section-btn {

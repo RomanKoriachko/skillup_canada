@@ -708,7 +708,6 @@ body {
   transform: translateY(10%);
 }
 .main .review-section {
-  padding-bottom: 48px;
   text-align: center;
 }
 .main .review-section .slider-text .slider-item {
@@ -792,7 +791,6 @@ body {
 }
 .main .review-section .slider-text .slick-dots {
   bottom: -45px;
-  width: 95%;
 }
 .main .review-section .author-and-fb-wrapper {
   margin-top: 15px;
@@ -819,6 +817,23 @@ body {
 }
 .main .review-section .review-section-btn:hover {
   transform: translateY(10%);
+}
+.main .certificate-section {
+  padding-bottom: 50px;
+}
+.main .certificate-section .certificate-wrapper {
+  font-family: "Exo 2";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  gap: 50px;
+}
+.main .certificate-section .certificate-wrapper > img {
+  width: 50%;
+}
+.main .certificate-section .certificate-wrapper .certificate-text > p,
+.main .certificate-section .certificate-wrapper .certificate-text div {
+  margin-bottom: 20px;
 }
 
 .footer {
@@ -1035,6 +1050,19 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
   }
+  .main .certificate-section .certificate-wrapper {
+    align-items: center;
+    gap: 30px;
+  }
+  .main .certificate-section .certificate-wrapper > img {
+    width: 100%;
+  }
+  .main .certificate-section .certificate-1-wrapper {
+    flex-direction: column-reverse;
+  }
+  .main .certificate-section .certificate-2-wrapper {
+    flex-direction: column;
+  }
   .footer .footer-wrapper {
     flex-direction: column;
     gap: 32px;
@@ -1161,6 +1189,9 @@ body {
   }
   .main .review-section .slider-text .slider-item .review-wrapper {
     max-width: 310px;
+  }
+  .main .review-section .slider-text .slick-dots {
+    width: 95%;
   }
   .main .review-section .review-section-btn {
     width: 100%;
