@@ -94,6 +94,13 @@ body {
   align-items: center;
   gap: 42px;
 }
+.main .introduce-section .introduce-wrapper .introduce-content .introduce-title-wrapper {
+  align-items: center;
+  gap: 10px;
+}
+.main .introduce-section .introduce-wrapper .introduce-content .introduce-title-wrapper img {
+  height: 40px;
+}
 .main .introduce-section .introduce-wrapper .introduce-content .introduce-title {
   font-family: "Exo 2";
   font-weight: 600;
@@ -115,6 +122,7 @@ body {
   line-height: 32px;
 }
 .main .introduce-section .introduce-wrapper .introduce-content .introduce-date {
+  margin-top: 20px;
   margin-bottom: 48px;
 }
 .main .introduce-section .introduce-wrapper .introduce-content button {
@@ -313,6 +321,9 @@ body {
   font-size: 36px;
   line-height: 48px;
   padding: 48px 0px;
+}
+.main .video-section {
+  padding-bottom: 30px;
 }
 .main .video-section .video {
   width: 50%;
@@ -666,7 +677,7 @@ body {
   line-height: 24px;
   border: 1px solid #0d1a30;
   border-radius: 6px;
-  padding: 13px 16px;
+  padding: 13px 50px;
   caret-color: #4ebd09;
 }
 .main .form-section .form-section-wrapper .form .form-input input:focus {
@@ -781,6 +792,7 @@ body {
 }
 .main .review-section .slider-text .slick-dots {
   bottom: -45px;
+  width: 95%;
 }
 .main .review-section .author-and-fb-wrapper {
   margin-top: 15px;

@@ -59,6 +59,13 @@ body {
             align-items: center;
             gap: 42px;
             .introduce-content {
+                .introduce-title-wrapper {
+                    align-items: center;
+                    gap: 10px;
+                    img {
+                        height: 40px;
+                    }
+                }
                 .introduce-title {
                     @include fonts.p2();
                 }
@@ -71,6 +78,7 @@ body {
                     @include fonts.p2();
                 }
                 .introduce-date {
+                    margin-top: 20px;
                     margin-bottom: 48px;
                 }
                 button {
@@ -227,6 +235,7 @@ body {
         padding: 48px 0px;
     }
     .video-section {
+        padding-bottom: 30px;
         .video {
             width: 50%;
             height: 354px;
@@ -496,7 +505,7 @@ body {
                         @include fonts.t2();
                         border: 1px solid #0d1a30;
                         border-radius: 6px;
-                        padding: 13px 16px;
+                        padding: 13px 50px;
                         caret-color: #4ebd09;
                         &:focus {
                             outline-color: #4ebd09;
@@ -592,6 +601,7 @@ body {
             }
             .slick-dots {
                 bottom: -45px;
+                width: 95%;
             }
         }
         .author-and-fb-wrapper {
