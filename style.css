@@ -707,8 +707,31 @@ body {
 .main .form-section .form-section-wrapper .form button:hover {
   transform: translateY(10%);
 }
+.main .certificate-section .dark-bg {
+  background-color: #0d1a30;
+  color: white;
+  padding-bottom: 50px;
+}
+.main .certificate-section .certificate-2-title {
+  padding-top: 60px;
+}
+.main .certificate-section .certificate-wrapper {
+  font-family: "Exo 2";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  gap: 50px;
+}
+.main .certificate-section .certificate-wrapper > img {
+  width: 50%;
+}
+.main .certificate-section .certificate-wrapper .certificate-text > p,
+.main .certificate-section .certificate-wrapper .certificate-text div {
+  margin-bottom: 20px;
+}
 .main .review-section {
   text-align: center;
+  margin-bottom: 50px;
 }
 .main .review-section .slider-text .slider-item {
   margin-right: 34px;
@@ -817,23 +840,6 @@ body {
 }
 .main .review-section .review-section-btn:hover {
   transform: translateY(10%);
-}
-.main .certificate-section {
-  padding-bottom: 50px;
-}
-.main .certificate-section .certificate-wrapper {
-  font-family: "Exo 2";
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  gap: 50px;
-}
-.main .certificate-section .certificate-wrapper > img {
-  width: 50%;
-}
-.main .certificate-section .certificate-wrapper .certificate-text > p,
-.main .certificate-section .certificate-wrapper .certificate-text div {
-  margin-bottom: 20px;
 }
 
 .footer {
