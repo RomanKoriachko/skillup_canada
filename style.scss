@@ -469,31 +469,6 @@ body {
             margin-top: 32px;
         }
     }
-    .certificate-section {
-        .dark-bg {
-            background-color: #0d1a30;
-            color: white;
-        }
-        .certificate-wrapper {
-            @include fonts.t2();
-            font-size: 21px;
-            gap: 50px;
-            padding-top: 58px;
-            padding-bottom: 58px;
-            > img {
-                width: 50%;
-            }
-            .certificate-title {
-                margin-top: 70px;
-            }
-            .certificate-text {
-                > p,
-                div {
-                    margin-bottom: 20px;
-                }
-            }
-        }
-    }
     .form-section {
         background: #0d1a30;
         color: #ffffff;
@@ -548,6 +523,31 @@ body {
                     @include mainButton();
                     margin-top: 24px;
                     color: #ffffff;
+                }
+            }
+        }
+    }
+    .certificate-section {
+        .dark-bg {
+            background-color: #0d1a30;
+            color: white;
+        }
+        .certificate-wrapper {
+            @include fonts.t2();
+            font-size: 21px;
+            gap: 50px;
+            padding-top: 58px;
+            padding-bottom: 58px;
+            > img {
+                width: 50%;
+            }
+            .certificate-title {
+                margin-top: 70px;
+            }
+            .certificate-text {
+                > p,
+                div {
+                    margin-bottom: 20px;
                 }
             }
         }
@@ -840,6 +840,24 @@ body {
                 }
             }
         }
+        .certificate-section {
+            .certificate-wrapper {
+                align-items: center;
+                gap: 30px;
+                > img {
+                    width: 100%;
+                }
+                .certificate-title {
+                    margin-top: 0px;
+                }
+            }
+            .certificate-1-wrapper {
+                flex-direction: column-reverse;
+            }
+            .certificate-2-wrapper {
+                flex-direction: column;
+            }
+        }
         .review-section {
             .slider-text {
                 .slider-item {
@@ -859,24 +877,6 @@ body {
                         }
                     }
                 }
-            }
-        }
-        .certificate-section {
-            .certificate-wrapper {
-                align-items: center;
-                gap: 30px;
-                > img {
-                    width: 100%;
-                }
-                .certificate-title {
-                    margin-top: 0px;
-                }
-            }
-            .certificate-1-wrapper {
-                flex-direction: column-reverse;
-            }
-            .certificate-2-wrapper {
-                flex-direction: column;
             }
         }
     }

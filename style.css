@@ -622,30 +622,6 @@ body {
   text-align: center;
   margin-top: 32px;
 }
-.main .certificate-section .dark-bg {
-  background-color: #0d1a30;
-  color: white;
-}
-.main .certificate-section .certificate-wrapper {
-  font-family: "Exo 2";
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  font-size: 21px;
-  gap: 50px;
-  padding-top: 58px;
-  padding-bottom: 58px;
-}
-.main .certificate-section .certificate-wrapper > img {
-  width: 50%;
-}
-.main .certificate-section .certificate-wrapper .certificate-title {
-  margin-top: 70px;
-}
-.main .certificate-section .certificate-wrapper .certificate-text > p,
-.main .certificate-section .certificate-wrapper .certificate-text div {
-  margin-bottom: 20px;
-}
 .main .form-section {
   background: #0d1a30;
   color: #ffffff;
@@ -734,6 +710,30 @@ body {
 }
 .main .form-section .form-section-wrapper .form button:hover {
   transform: translateY(10%);
+}
+.main .certificate-section .dark-bg {
+  background-color: #0d1a30;
+  color: white;
+}
+.main .certificate-section .certificate-wrapper {
+  font-family: "Exo 2";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  font-size: 21px;
+  gap: 50px;
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+.main .certificate-section .certificate-wrapper > img {
+  width: 50%;
+}
+.main .certificate-section .certificate-wrapper .certificate-title {
+  margin-top: 70px;
+}
+.main .certificate-section .certificate-wrapper .certificate-text > p,
+.main .certificate-section .certificate-wrapper .certificate-text div {
+  margin-bottom: 20px;
 }
 .main .review-section {
   text-align: center;
@@ -1046,19 +1046,6 @@ body {
   .main .form-section .form-section-wrapper .form button {
     width: 100%;
   }
-  .main .review-section .slider-text .slider-item .review-wrapper {
-    flex-direction: column;
-  }
-  .main .review-section .slider-text .slider-item .review-wrapper .review-avatar {
-    width: 85px;
-  }
-  .main .review-section .slider-text .slider-item .review-wrapper .review-text .fb-icon {
-    min-width: 40px;
-    height: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
   .main .certificate-section .certificate-wrapper {
     align-items: center;
     gap: 30px;
@@ -1074,6 +1061,19 @@ body {
   }
   .main .certificate-section .certificate-2-wrapper {
     flex-direction: column;
+  }
+  .main .review-section .slider-text .slider-item .review-wrapper {
+    flex-direction: column;
+  }
+  .main .review-section .slider-text .slider-item .review-wrapper .review-avatar {
+    width: 85px;
+  }
+  .main .review-section .slider-text .slider-item .review-wrapper .review-text .fb-icon {
+    min-width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .footer .footer-wrapper {
     flex-direction: column;
