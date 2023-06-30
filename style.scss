@@ -55,24 +55,24 @@ body {
                 height: 80px;
             }
         }
+        .introduce-title-wrapper {
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            img {
+                height: 40px;
+            }
+        }
+        .introduce-title {
+            @include fonts.p2();
+        }
+        .introduce-subtitle {
+            @include fonts.h1();
+        }
         .introduce-wrapper {
             align-items: center;
             gap: 42px;
             .introduce-content {
-                .introduce-title-wrapper {
-                    align-items: center;
-                    gap: 10px;
-                    img {
-                        height: 40px;
-                    }
-                }
-                .introduce-title {
-                    @include fonts.p2();
-                }
-                .introduce-subtitle {
-                    @include fonts.h1();
-                    margin-bottom: 48px;
-                }
                 .introduce-description,
                 .introduce-date {
                     @include fonts.p2();
@@ -89,7 +89,7 @@ body {
             .introduce-img {
                 width: 65%;
                 > img {
-                    width: 460px;
+                    width: 510px;
                 }
             }
         }
@@ -236,6 +236,10 @@ body {
     }
     .video-section {
         padding-bottom: 30px;
+        .video-section-header {
+            margin-top: 48px;
+            font-size: 40px;
+        }
         .video {
             width: 50%;
             height: 354px;
@@ -450,7 +454,7 @@ body {
         }
     }
     .benefits-section {
-        padding-bottom: 104px;
+        padding-bottom: 48px;
         .benefits-wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -463,6 +467,31 @@ body {
             @include fonts.p2();
             text-align: center;
             margin-top: 32px;
+        }
+    }
+    .certificate-section {
+        .dark-bg {
+            background-color: #0d1a30;
+            color: white;
+        }
+        .certificate-wrapper {
+            @include fonts.t2();
+            font-size: 21px;
+            gap: 50px;
+            padding-top: 58px;
+            padding-bottom: 58px;
+            > img {
+                width: 50%;
+            }
+            .certificate-title {
+                margin-top: 70px;
+            }
+            .certificate-text {
+                > p,
+                div {
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
     .form-section {
@@ -519,29 +548,6 @@ body {
                     @include mainButton();
                     margin-top: 24px;
                     color: #ffffff;
-                }
-            }
-        }
-    }
-    .certificate-section {
-        .dark-bg {
-            background-color: #0d1a30;
-            color: white;
-            padding-bottom: 50px;
-        }
-        .certificate-2-title {
-            padding-top: 60px;
-        }
-        .certificate-wrapper {
-            @include fonts.t2();
-            gap: 50px;
-            > img {
-                width: 50%;
-            }
-            .certificate-text {
-                > p,
-                div {
-                    margin-bottom: 20px;
                 }
             }
         }
@@ -722,14 +728,11 @@ body {
             .introduce-wrapper {
                 .introduce-content {
                     margin-right: 100px;
-                    .introduce-subtitle {
+                    .introduce-description {
+                        margin-top: 32px;
                         margin-bottom: 32px;
                     }
-                    .introduce-description {
-                        margin-bottom: 20px;
-                    }
                     .introduce-date {
-                        display: none;
                         margin-bottom: 32px;
                     }
                 }
@@ -865,6 +868,9 @@ body {
                 > img {
                     width: 100%;
                 }
+                .certificate-title {
+                    margin-top: 0px;
+                }
             }
             .certificate-1-wrapper {
                 flex-direction: column-reverse;
@@ -900,13 +906,15 @@ body {
 @media (max-width: 576px) {
     .main {
         .introduce-section {
+            .introduce-subtitle {
+                @include fonts.h2();
+                font-size: 38px;
+                margin-top: 32px;
+                color: #4ebd09;
+            }
             .introduce-wrapper {
                 .introduce-content {
                     margin-right: 0px;
-                    .introduce-subtitle {
-                        @include fonts.h2();
-                        margin-bottom: 32px;
-                    }
                     .introduce-date {
                         margin-bottom: 32px;
                     }

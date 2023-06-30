@@ -90,29 +90,29 @@ body {
 .main .introduce-section .logo > img {
   height: 80px;
 }
-.main .introduce-section .introduce-wrapper {
-  align-items: center;
-  gap: 42px;
-}
-.main .introduce-section .introduce-wrapper .introduce-content .introduce-title-wrapper {
+.main .introduce-section .introduce-title-wrapper {
   align-items: center;
   gap: 10px;
+  margin-bottom: 10px;
 }
-.main .introduce-section .introduce-wrapper .introduce-content .introduce-title-wrapper img {
+.main .introduce-section .introduce-title-wrapper img {
   height: 40px;
 }
-.main .introduce-section .introduce-wrapper .introduce-content .introduce-title {
+.main .introduce-section .introduce-title {
   font-family: "Exo 2";
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
 }
-.main .introduce-section .introduce-wrapper .introduce-content .introduce-subtitle {
+.main .introduce-section .introduce-subtitle {
   font-family: "Exo 2";
   font-weight: 700;
   font-size: 56px;
   line-height: 124%;
-  margin-bottom: 48px;
+}
+.main .introduce-section .introduce-wrapper {
+  align-items: center;
+  gap: 42px;
 }
 .main .introduce-section .introduce-wrapper .introduce-content .introduce-description,
 .main .introduce-section .introduce-wrapper .introduce-content .introduce-date {
@@ -149,7 +149,7 @@ body {
   width: 65%;
 }
 .main .introduce-section .introduce-wrapper .introduce-img > img {
-  width: 460px;
+  width: 510px;
 }
 .main .benefit-section {
   text-align: center;
@@ -324,6 +324,10 @@ body {
 }
 .main .video-section {
   padding-bottom: 30px;
+}
+.main .video-section .video-section-header {
+  margin-top: 48px;
+  font-size: 40px;
 }
 .main .video-section .video {
   width: 50%;
@@ -597,7 +601,7 @@ body {
   transform: translateY(10%);
 }
 .main .benefits-section {
-  padding-bottom: 104px;
+  padding-bottom: 48px;
 }
 .main .benefits-section .benefits-wrapper {
   display: grid;
@@ -617,6 +621,30 @@ body {
   line-height: 32px;
   text-align: center;
   margin-top: 32px;
+}
+.main .certificate-section .dark-bg {
+  background-color: #0d1a30;
+  color: white;
+}
+.main .certificate-section .certificate-wrapper {
+  font-family: "Exo 2";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  font-size: 21px;
+  gap: 50px;
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+.main .certificate-section .certificate-wrapper > img {
+  width: 50%;
+}
+.main .certificate-section .certificate-wrapper .certificate-title {
+  margin-top: 70px;
+}
+.main .certificate-section .certificate-wrapper .certificate-text > p,
+.main .certificate-section .certificate-wrapper .certificate-text div {
+  margin-bottom: 20px;
 }
 .main .form-section {
   background: #0d1a30;
@@ -706,28 +734,6 @@ body {
 }
 .main .form-section .form-section-wrapper .form button:hover {
   transform: translateY(10%);
-}
-.main .certificate-section .dark-bg {
-  background-color: #0d1a30;
-  color: white;
-  padding-bottom: 50px;
-}
-.main .certificate-section .certificate-2-title {
-  padding-top: 60px;
-}
-.main .certificate-section .certificate-wrapper {
-  font-family: "Exo 2";
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  gap: 50px;
-}
-.main .certificate-section .certificate-wrapper > img {
-  width: 50%;
-}
-.main .certificate-section .certificate-wrapper .certificate-text > p,
-.main .certificate-section .certificate-wrapper .certificate-text div {
-  margin-bottom: 20px;
 }
 .main .review-section {
   text-align: center;
@@ -935,14 +941,11 @@ body {
   .main .introduce-section .introduce-wrapper .introduce-content {
     margin-right: 100px;
   }
-  .main .introduce-section .introduce-wrapper .introduce-content .introduce-subtitle {
+  .main .introduce-section .introduce-wrapper .introduce-content .introduce-description {
+    margin-top: 32px;
     margin-bottom: 32px;
   }
-  .main .introduce-section .introduce-wrapper .introduce-content .introduce-description {
-    margin-bottom: 20px;
-  }
   .main .introduce-section .introduce-wrapper .introduce-content .introduce-date {
-    display: none;
     margin-bottom: 32px;
   }
   .main .introduce-section .introduce-wrapper .introduce-img {
@@ -1063,6 +1066,9 @@ body {
   .main .certificate-section .certificate-wrapper > img {
     width: 100%;
   }
+  .main .certificate-section .certificate-wrapper .certificate-title {
+    margin-top: 0px;
+  }
   .main .certificate-section .certificate-1-wrapper {
     flex-direction: column-reverse;
   }
@@ -1083,15 +1089,17 @@ body {
   }
 }
 @media (max-width: 576px) {
-  .main .introduce-section .introduce-wrapper .introduce-content {
-    margin-right: 0px;
-  }
-  .main .introduce-section .introduce-wrapper .introduce-content .introduce-subtitle {
+  .main .introduce-section .introduce-subtitle {
     font-family: "Exo 2";
     font-weight: 800;
     font-size: 36px;
     line-height: 48px;
-    margin-bottom: 32px;
+    font-size: 38px;
+    margin-top: 32px;
+    color: #4ebd09;
+  }
+  .main .introduce-section .introduce-wrapper .introduce-content {
+    margin-right: 0px;
   }
   .main .introduce-section .introduce-wrapper .introduce-content .introduce-date {
     margin-bottom: 32px;
