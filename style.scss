@@ -550,6 +550,19 @@ body {
                     margin-bottom: 20px;
                 }
             }
+            .certificate-item {
+                gap: 15px;
+                .checkmark-img {
+                    margin-top: 5px;
+                    margin-bottom: 0;
+                    height: 20px;
+                    min-width: 20px;
+                    background-image: url(images/certificate-ok-img.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
         }
     }
     .review-section {
