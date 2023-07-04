@@ -152,3 +152,43 @@ $(document).ready(function () {
         autoplaySpeed: 1000,
     });
 });
+
+// phone input
+
+const input = document.querySelector("#phone");
+const output = document.querySelector("#output");
+const inputWrapper = document.querySelector(".form-phone-input");
+const formbutton = document.querySelector(".send-form-button");
+
+const iti = window.intlTelInput(input, {
+    utilsScript:
+        "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+    nationalMode: true,
+    preferredCountries: ["ca", "ua"],
+});
+
+const handleChange = () => {
+    let text;
+    if (input.value) {
+        if ((text = iti.isValidNumber())) {
+            text =
+                "Номер дійсний, повний міжнародний формат: " + iti.getNumber();
+            inputWrapper.classList.add("true-number");
+            inputWrapper.classList.remove("false-number");
+            formbutton.disabled = false;
+        } else {
+            text = "Недійсний номер";
+            inputWrapper.classList.add("false-number");
+            inputWrapper.classList.remove("true-number");
+            formbutton.disabled = true;
+        }
+    } else {
+        text = "Будь ласка, введіть номер у міжнародному форматі";
+    }
+    const textNode = document.createTextNode(text);
+    output.innerHTML = "";
+    output.appendChild(textNode);
+};
+
+input.addEventListener("change", handleChange);
+input.addEventListener("keyup", handleChange);

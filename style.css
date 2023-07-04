@@ -127,11 +127,11 @@ body {
 }
 .main .introduce-section .introduce-wrapper .introduce-content button {
   width: 380px;
-  height: 50px;
+  min-height: 50px;
   background: #4ebd09;
   border-radius: 6px;
   border: none;
-  padding: 0px 12px;
+  padding: 3px 12px;
   cursor: pointer;
   font-family: "Exo 2";
   font-weight: 700;
@@ -271,11 +271,11 @@ body {
 }
 .main .who-is-section .who-is-tablet-btn {
   width: 380px;
-  height: 50px;
+  min-height: 50px;
   background: #4ebd09;
   border-radius: 6px;
   border: none;
-  padding: 0px 12px;
+  padding: 3px 12px;
   cursor: pointer;
   font-family: "Exo 2";
   font-weight: 700;
@@ -582,11 +582,11 @@ body {
 }
 .main .sign-up-section button {
   width: 380px;
-  height: 50px;
+  min-height: 50px;
   background: #4ebd09;
   border-radius: 6px;
   border: none;
-  padding: 0px 12px;
+  padding: 3px 12px;
   cursor: pointer;
   font-family: "Exo 2";
   font-weight: 700;
@@ -690,13 +690,40 @@ body {
 .main .form-section .form-section-wrapper .form .form-input:focus-within {
   color: #4ebd09;
 }
-.main .form-section .form-section-wrapper .form button {
+.main .form-section .form-section-wrapper .form .form-phone-input .form-phone-number-output {
+  font-family: "Exo 2";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 124%;
+}
+.main .form-section .form-section-wrapper .form .form-phone-input.false-number .phone-input {
+  caret-color: #bd3309;
+}
+.main .form-section .form-section-wrapper .form .form-phone-input.false-number .phone-input:focus {
+  outline-color: #bd3309;
+}
+.main .form-section .form-section-wrapper .form .form-phone-input.false-number:focus-within {
+  color: #bd3309;
+}
+.main .form-section .form-section-wrapper .form .form-phone-input.true-number .phone-input {
+  caret-color: #4ebd09;
+}
+.main .form-section .form-section-wrapper .form .form-phone-input.true-number .phone-input:focus {
+  outline-color: #4ebd09;
+}
+.main .form-section .form-section-wrapper .form .form-phone-input.true-number:focus-within {
+  color: #4ebd09;
+}
+.main .form-section .form-section-wrapper .form .phone-input {
+  width: 100%;
+}
+.main .form-section .form-section-wrapper .form .send-form-button {
   width: 380px;
-  height: 50px;
+  min-height: 50px;
   background: #4ebd09;
   border-radius: 6px;
   border: none;
-  padding: 0px 12px;
+  padding: 3px 12px;
   cursor: pointer;
   font-family: "Exo 2";
   font-weight: 700;
@@ -708,7 +735,7 @@ body {
   margin-top: 24px;
   color: #ffffff;
 }
-.main .form-section .form-section-wrapper .form button:hover {
+.main .form-section .form-section-wrapper .form .send-form-button:hover {
   transform: translateY(10%);
 }
 .main .certificate-section .dark-bg {
@@ -849,11 +876,11 @@ body {
 .main .review-section .review-section-btn {
   margin-top: 48px;
   width: 380px;
-  height: 50px;
+  min-height: 50px;
   background: #4ebd09;
   border-radius: 6px;
   border: none;
-  padding: 0px 12px;
+  padding: 3px 12px;
   cursor: pointer;
   font-family: "Exo 2";
   font-weight: 700;
@@ -884,11 +911,11 @@ body {
 }
 .footer .footer-btn {
   width: 380px;
-  height: 50px;
+  min-height: 50px;
   background: #4ebd09;
   border-radius: 6px;
   border: none;
-  padding: 0px 12px;
+  padding: 3px 12px;
   cursor: pointer;
   font-family: "Exo 2";
   font-weight: 700;
@@ -1063,7 +1090,7 @@ body {
   .main .form-section .form-section-wrapper .form {
     width: 70%;
   }
-  .main .form-section .form-section-wrapper .form button {
+  .main .form-section .form-section-wrapper .form .send-form-button {
     width: 100%;
   }
   .main .certificate-section .certificate-wrapper {
@@ -1243,5 +1270,10 @@ body {
   .footer .footer-buttons button {
     width: 40px;
     height: 40px;
+  }
+}
+@media (max-width: 360px) {
+  .main .introduce-section .introduce-title-wrapper .introduce-title {
+    width: 55%;
   }
 }

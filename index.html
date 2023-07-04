@@ -12,6 +12,10 @@
             href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;700&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
+        />
         <link rel="stylesheet" type="text/css" href="slick/slick.css" />
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     </head>
@@ -543,28 +547,37 @@
                             <div class="row form-input">
                                 <label class="label" for="name">Імʼя</label>
                                 <input
+                                    required
                                     id="name"
                                     type="text"
                                     placeholder="Імʼя"
                                 />
                             </div>
-                            <div class="row form-input">
+                            <div class="row form-input form-phone-input">
                                 <label class="label" for="phone">Телефон</label>
                                 <input
+                                    required
                                     id="phone"
+                                    class="phone-input"
                                     type="tel"
-                                    placeholder="Телефон"
                                 />
+                                <p class="form-phone-number-output" id="output">
+                                    Будь ласка, введіть номер у міжнародному
+                                    форматі
+                                </p>
                             </div>
                             <div class="row form-input">
                                 <label class="label" for="email">Email</label>
                                 <input
+                                    required
                                     id="email"
                                     type="email"
                                     placeholder="Email"
                                 />
                             </div>
-                            <button>Записатись на безкоштовний вебінар</button>
+                            <button class="send-form-button">
+                                Записатись на безкоштовний вебінар
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -898,6 +911,7 @@
             src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
         ></script>
         <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>

@@ -3,11 +3,11 @@
 
 @mixin mainButton() {
     width: 380px;
-    height: 50px;
+    min-height: 50px;
     background: #4ebd09;
     border-radius: 6px;
     border: none;
-    padding: 0px 12px;
+    padding: 3px 12px;
     cursor: pointer;
     @include fonts.b1();
     transition: 0.3s all;
@@ -519,7 +519,37 @@ body {
                         color: #4ebd09;
                     }
                 }
-                button {
+                .form-phone-input {
+                    .form-phone-number-output {
+                        @include fonts.t4();
+                    }
+                }
+                .form-phone-input.false-number {
+                    .phone-input {
+                        caret-color: #bd3309;
+                        &:focus {
+                            outline-color: #bd3309;
+                        }
+                    }
+                    &:focus-within {
+                        color: #bd3309;
+                    }
+                }
+                .form-phone-input.true-number {
+                    .phone-input {
+                        caret-color: #4ebd09;
+                        &:focus {
+                            outline-color: #4ebd09;
+                        }
+                    }
+                    &:focus-within {
+                        color: #4ebd09;
+                    }
+                }
+                .phone-input {
+                    width: 100%;
+                }
+                .send-form-button {
                     @include mainButton();
                     margin-top: 24px;
                     color: #ffffff;
@@ -854,7 +884,7 @@ body {
                 }
                 .form {
                     width: 70%;
-                    button {
+                    .send-form-button {
                         width: 100%;
                     }
                 }
@@ -1072,6 +1102,19 @@ body {
             button {
                 width: 40px;
                 height: 40px;
+            }
+        }
+    }
+}
+
+// Small mobile
+@media (max-width: 360px) {
+    .main {
+        .introduce-section {
+            .introduce-title-wrapper {
+                .introduce-title {
+                    width: 55%;
+                }
             }
         }
     }
