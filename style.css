@@ -721,6 +721,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-size: 21px;
+  align-items: center;
   gap: 50px;
   padding-top: 58px;
   padding-bottom: 58px;
@@ -729,7 +730,7 @@ body {
   width: 50%;
 }
 .main .certificate-section .certificate-wrapper .certificate-title {
-  margin-top: 70px;
+  margin-top: 0;
 }
 .main .certificate-section .certificate-wrapper .certificate-text > p,
 .main .certificate-section .certificate-wrapper .certificate-text div {
@@ -747,6 +748,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.main .certificate-section .certificate-wrapper .certificate-2-img-wrapper {
+  width: 50%;
+}
+.main .certificate-section .certificate-wrapper .certificate-2-img-wrapper > img {
+  width: 90%;
 }
 .main .review-section {
   text-align: center;
@@ -1074,6 +1081,13 @@ body {
   }
   .main .certificate-section .certificate-2-wrapper {
     flex-direction: column;
+  }
+  .main .certificate-section .certificate-2-wrapper .certificate-2-img-wrapper {
+    text-align: center;
+    width: 100%;
+  }
+  .main .certificate-section .certificate-2-wrapper .certificate-2-img-wrapper > img {
+    width: 85%;
   }
   .main .review-section .slider-text .slider-item .review-wrapper {
     flex-direction: column;

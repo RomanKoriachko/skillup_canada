@@ -535,6 +535,7 @@ body {
         .certificate-wrapper {
             @include fonts.t2();
             font-size: 21px;
+            align-items: center;
             gap: 50px;
             padding-top: 58px;
             padding-bottom: 58px;
@@ -542,7 +543,7 @@ body {
                 width: 50%;
             }
             .certificate-title {
-                margin-top: 70px;
+                margin-top: 0;
             }
             .certificate-text {
                 > p,
@@ -561,6 +562,12 @@ body {
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
+                }
+            }
+            .certificate-2-img-wrapper {
+                width: 50%;
+                > img {
+                    width: 90%;
                 }
             }
         }
@@ -869,6 +876,13 @@ body {
             }
             .certificate-2-wrapper {
                 flex-direction: column;
+                .certificate-2-img-wrapper {
+                    text-align: center;
+                    width: 100%;
+                    > img {
+                        width: 85%;
+                    }
+                }
             }
         }
         .review-section {
