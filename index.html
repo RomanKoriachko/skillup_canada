@@ -543,11 +543,12 @@
                                 ХХ листопада о ХХ.00 (GMT-4) за Торонто
                             </p>
                         </div>
-                        <form class="form">
+                        <form class="form" method="POST" action="send.php">
                             <div class="row form-input">
                                 <label class="label" for="name">Імʼя</label>
                                 <input
-                                    required
+                                    required=""
+                                    name="name"
                                     id="name"
                                     type="text"
                                     placeholder="Імʼя"
@@ -557,7 +558,8 @@
                                 <label class="label" for="phone">Телефон</label>
                                 <input
                                     required
-                                    id="phone"
+                                    name="phone1"
+                                    id="phone1"
                                     class="phone-input"
                                     type="tel"
                                 />
@@ -569,13 +571,14 @@
                             <div class="row form-input">
                                 <label class="label" for="email">Email</label>
                                 <input
-                                    required
+                                    required=""
+                                    name="email"
                                     id="email"
                                     type="email"
                                     placeholder="Email"
                                 />
                             </div>
-                            <button class="send-form-button">
+                            <button class="send-form-button" type="submit">
                                 Записатись на безкоштовний вебінар
                             </button>
                         </form>

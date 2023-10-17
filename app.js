@@ -155,40 +155,49 @@ $(document).ready(function () {
 
 // phone input
 
-const input = document.querySelector("#phone");
+const input = document.querySelector("#phone1");
 const output = document.querySelector("#output");
 const inputWrapper = document.querySelector(".form-phone-input");
-const formbutton = document.querySelector(".send-form-button");
+const form = document.querySelector(".form");
+const errorMap = [
+    "Некорректный номер",
+    "Некорректный код страны",
+    "Мало символів",
+    "Забагато символів",
+    "Некорректный номер",
+];
 
 const iti = window.intlTelInput(input, {
     utilsScript:
         "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-    nationalMode: true,
+    hiddenInput: "phone",
     preferredCountries: ["ca", "ua"],
 });
 
-const handleChange = () => {
-    let text;
-    if (input.value) {
-        if ((text = iti.isValidNumber())) {
-            text =
+input.addEventListener("blur", function () {
+    reset();
+    if (input.value.trim()) {
+        if (iti.isValidNumber()) {
+            output.innerHTML =
                 "Номер дійсний, повний міжнародний формат: " + iti.getNumber();
-            inputWrapper.classList.add("true-number");
-            inputWrapper.classList.remove("false-number");
-            formbutton.disabled = false;
         } else {
-            text = "Недійсний номер";
+            form.addEventListener("submit", preventDefault);
             inputWrapper.classList.add("false-number");
-            inputWrapper.classList.remove("true-number");
-            formbutton.disabled = true;
+            const errorCode = iti.getValidationError();
+            output.innerHTML = errorMap[errorCode];
         }
-    } else {
-        text = "Будь ласка, введіть номер у міжнародному форматі";
     }
-    const textNode = document.createTextNode(text);
-    output.innerHTML = "";
-    output.appendChild(textNode);
+});
+
+const preventDefault = function (e) {
+    e.preventDefault();
 };
 
-input.addEventListener("change", handleChange);
-input.addEventListener("keyup", handleChange);
+const reset = function () {
+    inputWrapper.classList.remove("false-number");
+    output.innerHTML = "";
+    form.removeEventListener("submit", preventDefault);
+};
+
+input.addEventListener("change", reset);
+input.addEventListener("keyup", reset);
