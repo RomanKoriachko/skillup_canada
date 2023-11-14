@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>SkillUp</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,46 +12,175 @@
             href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;700&display=swap"
             rel="stylesheet"
         />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
-        />
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"/> -->
         <link rel="stylesheet" type="text/css" href="slick/slick.css" />
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+        <link
+            rel="shortcun icon"
+            href="skillup_favicon.ico"
+            type="image/x-icon"
+        />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <link href="intlTelInput/style.css" rel="stylesheet" />
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-K9XSXFMJ");
+        </script>
+        <!-- End Google Tag Manager -->
+
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-11303674453"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "AW-11303674453");
+        </script>
     </head>
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-K9XSXFMJ"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe
+        ></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
         <main class="main">
+            <div class="mobile-registration-btn-wrapper hide">
+                <button class="main-btn">
+                    Записатись на безкоштовний вебінар
+                </button>
+            </div>
             <section class="introduce-section">
+                <div class="introduce-section-bg"></div>
                 <div class="container">
                     <div class="logo">
                         <img src="images/logo-img.svg" alt="" />
                     </div>
-                    <div class="row introduce-title-wrapper">
-                        <div class="introduce-title">
-                            Старт в IT для українців
-                        </div>
-                        <img src="images/ukr-flag-heart.svg" alt="" />
-                    </div>
-                    <p class="introduce-subtitle">
-                        Професія Тестувальник ПЗ «з нуля»
-                    </p>
-                    <div class="row introduce-wrapper">
+                    <div class="introduce-wrapper">
                         <div class="introduce-content">
-                            <p class="introduce-description">
-                                Як працювати в Канаді без досвіду роботи та
-                                отримувати $50,000 - $60,000 на рік
+                            <p class="introduce-content-title">
+                                Професія Тестувальник ПЗ <span>«з нуля»</span>
                             </p>
-                            <p class="introduce-date">
-                                Вже ХХ листопада <br />
-                                о ХХ:00 (GMT-4) за Торонто
-                            </p>
-                            <button class="main-btn">Зареєструватися</button>
-                        </div>
-                        <div class="introduce-img">
+                            <div
+                                class="introduce-content-subtitle upper-case row"
+                            >
+                                <p>Старт в IT для українців</p>
+                                <div class="heart-img"></div>
+                            </div>
+                            <div class="introduce-content-places-wrapper">
+                                <p
+                                    class="introduce-content-subtitle introduce-content-places"
+                                >
+                                    Кількість місць обмежена
+                                </p>
+                                <p
+                                    class="introduce-content-subtitle introduce-content-places"
+                                >
+                                    Залишилось <span>8</span> місць
+                                </p>
+                            </div>
                             <img
-                                src="images/introduce-section-img.webp"
+                                class="introduse-section-img"
+                                src="images/review-section-img.webp"
                                 alt=""
                             />
+                        </div>
+                        <div class="introduce-form-wrapper">
+                            <div class="introduce-text-wrapper">
+                                <div class="introduce-content-subtitle">
+                                    <p
+                                        class="introduce-content-subtitle-larger"
+                                    >
+                                        13 листопада
+                                    </p>
+                                    <p
+                                        class="introduce-content-subtitle-smaller"
+                                    >
+                                        <span>19:00</span> Торонто
+                                    </p>
+                                </div>
+                                <p
+                                    class="introduce-content-subtitle introduce-content-green-text"
+                                >
+                                    Безкоштовний вебінар
+                                </p>
+                            </div>
+                            <form
+                                class="introduce-form"
+                                method="POST"
+                                action="send.php"
+                            >
+                                <div class="row form-input">
+                                    <label class="label" for="name">Імʼя</label>
+                                    <input
+                                        style="padding-left: 10px"
+                                        type="text"
+                                        class="form-input"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Ім'я"
+                                        required=""
+                                    />
+                                </div>
+                                <div class="row form-input">
+                                    <label class="label" for="phone"
+                                        >Телефон</label
+                                    >
+                                    <input
+                                        type="tel"
+                                        class="form-input"
+                                        name="phone1"
+                                        id="phone1"
+                                        required
+                                    />
+                                    <div class="help-block"></div>
+                                </div>
+                                <div class="row form-input">
+                                    <label class="label" for="email"
+                                        >Email</label
+                                    >
+                                    <input
+                                        style="padding-left: 10px"
+                                        type="email"
+                                        class="form-input"
+                                        name="email"
+                                        id="email"
+                                        placeholder="Email"
+                                        required=""
+                                        pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                                        maxlength="25"
+                                    />
+                                </div>
+                                <button type="submit" class="btn">
+                                    Зайняти місце
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -64,12 +193,12 @@
                     <div class="row benefit-wrapper">
                         <div class="benefit-item">
                             <img src="images/img-rocket.svg" alt="" />
-                            <p>
+                            <p class="benefit-item-title">
                                 Бажаєте почати роботу в IT,<br />та поки не
                                 знаєте як
                             </p>
-                            <p>
-                                Розкриємо реалії працевлаштування у Канаді.
+                            <p class="benefit-item-subtitle">
+                                Розкриємо реалії працевлаштування в Канаді.
                                 Розкажемо про вимоги до резюме, проходження
                                 технічних інтерв’ю та взаємодію з рекрутерами.
                                 Перші кроки найскладніші, але ми допоможемо вам
@@ -78,14 +207,14 @@
                         </div>
                         <div class="benefit-item">
                             <img src="images/img-compas.svg" alt="" />
-                            <p>
+                            <p class="benefit-item-title">
                                 Хочете дізнатися, який напрямок в IT підійде
                                 початківцю
                             </p>
-                            <p>
+                            <p class="benefit-item-subtitle">
                                 Дамо алгоритм «Як за 3 місяці з нуля стати
                                 тестувальником ПЗ», який допоможе вам знайти
-                                роботу в Tech-компаніях у Канаді та віддалено в
+                                роботу в Tech-компаніях в Канаді та віддалено в
                                 США. На вебінарі ви зрозумієте, чому професія
                                 тестувальника підходить новачкам і де варто
                                 спробувати власні сили.
@@ -93,11 +222,11 @@
                         </div>
                         <div class="benefit-item">
                             <img src="images/img-money.svg" alt="" />
-                            <p>
+                            <p class="benefit-item-title">
                                 Волієте реалізуватися в професії, що актуальна
                                 за кордоном
                             </p>
-                            <p>
+                            <p class="benefit-item-subtitle">
                                 Покажемо можливості IT-ринку Канади, за якими ви
                                 оціните свої перспективи у кар'єрі на найближчі
                                 6 місяців. Спікери дадуть поради, як подолати
@@ -117,11 +246,12 @@
                         <div class="who-is-text">
                             <p>
                                 Тестувальник програмного забезпечення — це
-                                людина, якій в руки потрапляють нові версії
+                                людина, якій у руки потрапляють нові версії
                                 програм, сайтів або мобільних додатків. Він
                                 ставить себе на місце користувача і починає
-                                грати в гру: використовує додатки, а також
-                                досліджує сайти й програми на наявність помилок.
+                                грати у гру: використовує додатки, а також
+                                досліджує сайти та програми на наявність
+                                помилок.
                             </p>
                             <p>
                                 Коли тестувальник знаходить помилки, то складає
@@ -157,6 +287,8 @@
                                 <div>
                                     <div class="scale-parent">
                                         <div
+                                            data-aos="fade-right"
+                                            data-aos-once="true"
                                             class="scale-children scale-children-1"
                                         ></div>
                                     </div>
@@ -173,6 +305,8 @@
                                 <div>
                                     <div class="scale-parent">
                                         <div
+                                            data-aos="fade-right"
+                                            data-aos-once="true"
                                             class="scale-children scale-children-2"
                                         ></div>
                                     </div>
@@ -189,6 +323,8 @@
                                 <div>
                                     <div class="scale-parent">
                                         <div
+                                            data-aos="fade-right"
+                                            data-aos-once="true"
                                             class="scale-children scale-children-3"
                                         ></div>
                                     </div>
@@ -265,37 +401,52 @@
                 <div class="container">
                     <p>Старт в ІТ без досвіду в програмуванні!</p>
                     <p>Допомога в працевлаштуванні!</p>
+                    <button class="start-in-it-btn main-btn">
+                        Записатись на безкоштовний вебінар
+                    </button>
                 </div>
             </section>
-            <section class="video-section">
+            <section class="video-section" id="program">
                 <div class="container">
                     <p class="video-section-header h2-header">
                         Що ви дізнаєтесь на безкоштовному вебінарі?
                     </p>
-                    <div class="video-section-text">
-                        <div class="row video-section-item">
-                            <div class="check-img"></div>
-                            <div>Що потрібно для вдалого старту в IT</div>
-                        </div>
-                        <div class="row video-section-item">
-                            <div class="check-img"></div>
-                            <div>У чому полягає робота тестувальника ПЗ</div>
-                        </div>
-                        <div class="row video-section-item">
-                            <div class="check-img"></div>
-                            <div>
-                                Яку репутацію мають Українці на IT-ринку Канади
+                    <div class="row video-section-row">
+                        <div class="video-section-text">
+                            <div class="row video-section-item">
+                                <div class="check-img"></div>
+                                <div>Що потрібно для вдалого старту в IT</div>
+                            </div>
+                            <div class="row video-section-item">
+                                <div class="check-img"></div>
+                                <div>
+                                    У чому полягає робота тестувальника ПЗ
+                                </div>
+                            </div>
+                            <div class="row video-section-item">
+                                <div class="check-img"></div>
+                                <div>
+                                    Яку репутацію мають Українці на IT-ринку
+                                    Канади
+                                </div>
+                            </div>
+                            <div class="row video-section-item">
+                                <div class="check-img"></div>
+                                <div>
+                                    Де реально отримувати ЗП від $60,000 на рік
+                                </div>
+                            </div>
+                            <div class="row video-section-item">
+                                <div class="check-img"></div>
+                                <div>Як працювати за гнучким графіком</div>
                             </div>
                         </div>
-                        <div class="row video-section-item">
-                            <div class="check-img"></div>
-                            <div>
-                                Де реально отримувати ЗП від $60,000 на рік
-                            </div>
-                        </div>
-                        <div class="row video-section-item">
-                            <div class="check-img"></div>
-                            <div>Як працювати за гнучким графіком</div>
+                        <div class="video-section-img-wrapper">
+                            <img
+                                class="video-section-img"
+                                src="images/video-section-img.webp"
+                                alt=""
+                            />
                         </div>
                     </div>
                 </div>
@@ -371,12 +522,12 @@
                             <p>років на ринку</p>
                         </div>
                         <div class="numbers-item">
-                            <p>36 000+</p>
+                            <p>50 000+</p>
                             <p>випускників</p>
                         </div>
                         <div class="numbers-item">
                             <p>14 000+</p>
-                            <p>студентів отримали роботу у першій місяць</p>
+                            <p>студентів отримали роботу у перший місяць</p>
                         </div>
                         <div class="numbers-item">
                             <p>127+</p>
@@ -450,7 +601,7 @@
                     </button>
                 </div>
             </section>
-            <section class="benefits-section">
+            <section class="benefits-section" id="advantages">
                 <div class="container">
                     <p class="benefits-header h2-header">
                         Які переваги в професії тестувальника ПЗ?
@@ -523,7 +674,7 @@
                     </p>
                 </div>
             </section>
-            <section class="form-section">
+            <section class="form-section" id="registration">
                 <div class="container">
                     <div class="row form-section-wrapper">
                         <div class="form-section-text">
@@ -534,19 +685,21 @@
                             <p class="form-section-text-hide-tablet">
                                 Варто задуматися: через 3 місяці після початку
                                 курсів ви можете влаштуватись на роботу та
-                                отримувати в середньому $5,000 / місяць на
-                                ІТ-ринку Канади і віддалено в США. А за 1-2 роки
-                                зможете заробляти більше $7,000 / місяць.
+                                отримувати в середньому
+                                <span>$5,000 / місяць</span> на ІТ-ринку Канади
+                                і віддалено в США. А за 1-2 роки зможете
+                                заробляти <span>більше $7,000 / місяць.</span>
                             </p>
                             <p>
                                 Live-вебінар відбудеться <br />
-                                ХХ листопада о ХХ.00 (GMT-4) за Торонто
+                                11 листопада о 12:00 (GMT-4) за Торонто
                             </p>
                         </div>
                         <form class="form" method="POST" action="send.php">
                             <div class="row form-input">
                                 <label class="label" for="name">Імʼя</label>
                                 <input
+                                    style="padding-left: 10px"
                                     required=""
                                     name="name"
                                     id="name"
@@ -555,27 +708,30 @@
                                 />
                             </div>
                             <div class="row form-input form-phone-input">
-                                <label class="label" for="phone">Телефон</label>
+                                <label class="label" for="phone"
+                                    >Номер телефону (будь-якого
+                                    месенджера)</label
+                                >
                                 <input
                                     required
-                                    name="phone1"
-                                    id="phone1"
+                                    name="phone2"
+                                    id="phone2"
                                     class="phone-input"
                                     type="tel"
                                 />
-                                <p class="form-phone-number-output" id="output">
-                                    Будь ласка, введіть номер у міжнародному
-                                    форматі
-                                </p>
+                                <div class="help-block"></div>
                             </div>
                             <div class="row form-input">
                                 <label class="label" for="email">Email</label>
                                 <input
+                                    style="padding-left: 10px"
                                     required=""
                                     name="email"
                                     id="email"
                                     type="email"
                                     placeholder="Email"
+                                    pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                                    maxlength="25"
                                 />
                             </div>
                             <button class="send-form-button" type="submit">
@@ -585,7 +741,7 @@
                     </div>
                 </div>
             </section>
-            <section class="certificate-section">
+            <section class="certificate-section" id="certificate">
                 <div class="container">
                     <div class="row certificate-wrapper certificate-1-wrapper">
                         <img src="images/certificate-1.png" alt="" />
@@ -604,7 +760,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="dark-bg">
+                <div class="dark-bg" id="istqb">
                     <div class="container">
                         <div
                             class="row certificate-wrapper certificate-2-wrapper"
@@ -674,11 +830,13 @@
                     </div>
                 </div>
             </section>
-            <section class="review-section">
+            <section class="review-section" id="reviews">
                 <div class="container-slider">
-                    <p class="review-section-header h2-header">
-                        Що кажуть наші випускники?
-                    </p>
+                    <div class="container">
+                        <p class="review-section-header h2-header">
+                            Що кажуть наші випускники?
+                        </p>
+                    </div>
                     <div class="row slider-text">
                         <div class="slider-item">
                             <div class="row review-wrapper">
@@ -914,7 +1072,100 @@
             src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
         ></script>
         <script type="text/javascript" src="slick/slick.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script> -->
         <script src="app.js"></script>
+        <script src="intlTelInput/parent.intlTelInput.js"></script>
+        <script src="intlTelInput/intlTelInput.js"></script>
+        <script>
+            validatePhone("#phone1");
+            validatePhone("#phone2");
+        </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!-- <script>
+                    let wdate = new Date();
+                        let d = ["неділю", "понеділок", "вівторок", "середу", "четвер", "п'ятницю", "суботу"]; // склонение дней недели - напишет так, как указано тут
+                        let wTime; //время указівается непосредственно в день веба в скрипте иф-елс
+                        let myDate = new Date();
+                        let myhour = myDate.getUTCHours() + 2; //получаем часы
+                        let myminutes = myDate.getUTCMinutes(); //получаем минуты
+                        let mytime = myhour + ':' + myminutes;//время для отслеживания времени суток в четверг
+                        let webDate1;
+                
+                          
+                        // Дата в формате "1 января"
+                        //Ниже определяется текущий день недели и присваивается значение 0 = воскресенье 6 = понедельник
+                        if (wdate.getDay() == 3) {
+                                wdate = d[6]; //присваиваем день вебинара - четверг
+                                wTime = '12:00'; //присваиваем время вебинара - четверг
+                                webDate1 = new Date(myDate.setDate(myDate.getDate()+3)).toLocaleString('uk-UA', //дата сегодня + сколько дней до четверга
+                                    {
+                                        day: 'numeric',
+                                        month: 'long'
+                                    });
+                            } else if (wdate.getDay() == 4) {
+                                if (mytime >= '00:01' && mytime < '12:00') { //показываем что веб в четверг в 19 только до 18 часов
+                                    wdate = d[6];
+                                    wTime = '12:00';
+                                    webDate1 = new Date(myDate.setDate(myDate.getDate())).toLocaleString('uk-UA',
+                                        {
+                                            day: 'numeric',
+                                            month: 'long'
+                                        });
+                                } else { //после 18 показываем что веб в след четверг (сегодня + 6 дней)
+                                    wdate = d[6];
+                                    wTime = '12:00';
+                                    webDate1 = new Date(myDate.setDate(myDate.getDate() + 6)).toLocaleString('uk-UA',
+                                        {
+                                            day: 'numeric',
+                                            month: 'long'
+                                        });
+                                }
+                            } else if (wdate.getDay() == 5) {
+                                wdate = d[6];
+                                wTime = '12:00';
+                                webDate1 = new Date(myDate.setDate(myDate.getDate() + 5)).toLocaleString('uk-UA',
+                                    {
+                                        day: 'numeric',
+                                        month: 'long'
+                                    });
+                            } else if (wdate.getDay() == 6) {
+                                wdate = d[6];
+                                wTime = '12:00';
+                                webDate1 = new Date(myDate.setDate(myDate.getDate() + 4)).toLocaleString('uk-UA',
+                                    {
+                                        day: 'numeric',
+                                        month: 'long'
+                                    });
+                            } else if (wdate.getDay() == 0) {
+                                wdate = d[6];
+                                wTime = '12:00';
+                                webDate1 = new Date(myDate.setDate(myDate.getDate() + 3)).toLocaleString('uk-UA',
+                                    {
+                                        day: 'numeric',
+                                        month: 'long'
+                                    });
+                            } else if (wdate.getDay() == 1) {
+                                wdate = d[6];
+                                wTime = '12:00';
+                                webDate1 = new Date(myDate.setDate(myDate.getDate() + 2)).toLocaleString('uk-UA',
+                                    {
+                                        day: 'numeric',
+                                        month: 'long'
+                                    });
+                            } else if (wdate.getDay() == 2) {
+                                wdate = d[6];
+                                wTime = '12:00';
+                                webDate1 = new Date(myDate.setDate(myDate.getDate() + 1)).toLocaleString('uk-UA',
+                                    {
+                                        day: 'numeric',
+                                        month: 'long'
+                                    });
+                            }
+                         /* строчка ниже вставляет во все фрагменты где есть класс currentDate автодату, тут можно поменять текст перед автодатой или убрать к примеру название дня недели*/
+                         $('.currentDate').html('<div ">Вже ' + webDate1 + ' о&nbsp' + wTime + ' (GMT&nbsp-&nbsp4) за Торонто.</div>');
+                 </script> -->
     </body>
 </html>

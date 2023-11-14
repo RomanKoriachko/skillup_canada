@@ -28,87 +28,6 @@ if (window.screen.height > 1100) {
     }
 }
 
-let whoIsSection = document.querySelector(".who-is-section");
-let scale1 = document.querySelector(".scale-children-1");
-let scale2 = document.querySelector(".scale-children-2");
-let scale3 = document.querySelector(".scale-children-3");
-
-window.addEventListener("scroll", function () {
-    if (window.screen.height > 1100) {
-        if (
-            whoIsSection.getBoundingClientRect().top -
-                window.screen.height / 2 <
-            0
-        ) {
-            scale1.classList.add("show");
-            scale1.classList.remove("hide");
-        } else {
-            scale1.classList.add("hide");
-            scale1.classList.remove("show");
-        }
-        if (
-            whoIsSection.getBoundingClientRect().top +
-                20 -
-                window.screen.height / 2 <
-            0
-        ) {
-            scale2.classList.add("show");
-            scale2.classList.remove("hide");
-        } else {
-            scale2.classList.add("hide");
-            scale2.classList.remove("show");
-        }
-        if (
-            whoIsSection.getBoundingClientRect().top +
-                70 -
-                window.screen.height / 2 <
-            0
-        ) {
-            scale3.classList.add("show");
-            scale3.classList.remove("hide");
-        } else {
-            scale3.classList.add("hide");
-            scale3.classList.remove("show");
-        }
-    } else {
-        if (
-            whoIsSection.getBoundingClientRect().top -
-                window.screen.height / 10 <
-            0
-        ) {
-            scale1.classList.add("show");
-            scale1.classList.remove("hide");
-        } else {
-            scale1.classList.add("hide");
-            scale1.classList.remove("show");
-        }
-        if (
-            whoIsSection.getBoundingClientRect().top +
-                100 -
-                window.screen.height / 10 <
-            0
-        ) {
-            scale2.classList.add("show");
-            scale2.classList.remove("hide");
-        } else {
-            scale2.classList.add("hide");
-            scale2.classList.remove("show");
-        }
-        if (
-            whoIsSection.getBoundingClientRect().top +
-                200 -
-                window.screen.height / 10 <
-            0
-        ) {
-            scale3.classList.add("show");
-            scale3.classList.remove("hide");
-        } else {
-            scale3.classList.add("hide");
-            scale3.classList.remove("show");
-        }
-    }
-});
-
 // Slider
 
 $(document).ready(function () {
@@ -153,51 +72,22 @@ $(document).ready(function () {
     });
 });
 
-// phone input
+// Mobile button
 
-const input = document.querySelector("#phone1");
-const output = document.querySelector("#output");
-const inputWrapper = document.querySelector(".form-phone-input");
-const form = document.querySelector(".form");
-const errorMap = [
-    "Некорректный номер",
-    "Некорректный код страны",
-    "Мало символів",
-    "Забагато символів",
-    "Некорректный номер",
-];
+const mobileBtn = document.querySelector(".mobile-registration-btn-wrapper");
 
-const iti = window.intlTelInput(input, {
-    utilsScript:
-        "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-    hiddenInput: "phone",
-    preferredCountries: ["ca", "ua"],
-});
-
-input.addEventListener("blur", function () {
-    reset();
-    if (input.value.trim()) {
-        if (iti.isValidNumber()) {
-            output.innerHTML =
-                "Номер дійсний, повний міжнародний формат: " + iti.getNumber();
-        } else {
-            form.addEventListener("submit", preventDefault);
-            inputWrapper.classList.add("false-number");
-            const errorCode = iti.getValidationError();
-            output.innerHTML = errorMap[errorCode];
-        }
+window.addEventListener("scroll", () => {
+    if (
+        window.scrollY > window.innerHeight &&
+        window.scrollY <=
+            formSection.getBoundingClientRect().top +
+                window.scrollY -
+                window.innerHeight
+    ) {
+        mobileBtn.classList.add("show");
+        mobileBtn.classList.remove("hide");
+    } else {
+        mobileBtn.classList.add("hide");
+        mobileBtn.classList.remove("show");
     }
 });
-
-const preventDefault = function (e) {
-    e.preventDefault();
-};
-
-const reset = function () {
-    inputWrapper.classList.remove("false-number");
-    output.innerHTML = "";
-    form.removeEventListener("submit", preventDefault);
-};
-
-input.addEventListener("change", reset);
-input.addEventListener("keyup", reset);
